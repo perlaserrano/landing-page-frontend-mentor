@@ -1,0 +1,123 @@
+/* layout.css */
+.medium-container {
+  padding: 0;
+}
+
+.container {
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  background-color: var(--white);
+}
+
+.row {
+  margin: 0;
+}
+
+.text-section {
+  /* padding: 3rem; */
+  max-width: 90%;
+  padding: 8.5rem 1.5rem;
+  margin: 0 auto;
+}
+
+.text-section h3{
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-family: 'Fraunces', serif;
+  color: hsl(213, 9%, 39%);
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.text-section a {
+  font-family: 'Fraunces', serif;
+  font-weight: 700;
+  /* color: yellow; Ajusta el color según tus necesidades */
+  text-decoration: none;
+  color: var(--dark);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+}
+.text-section a:after{
+  content: "";
+  display: inline-block;
+  width: 110%;
+  height: 7px;
+  border-radius: 7px;
+  position: absolute;
+  bottom: -1px;
+  left: -5%;
+  right: -5%;
+  background-color: hsl(51, 100%, 49%);
+  opacity: 0.3;
+  z-index: -1;
+} 
+.graphic-design h1 p{
+  color:  hsl(167, 40%, 24%);
+}
+
+.img-section {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.img-overlay-container {
+  position: relative;
+  padding: 0;
+}
+
+.img-overlay-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.overlay-text-one {
+  position: absolute;
+  top:75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color:  hsl(167, 40%, 24%);
+  text-align: center;
+  width: 80%;
+}
+
+.overlay-text-one h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  margin-bottom: 20px;
+
+}
+.overlay-text-one p {
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+
+}
+.overlay-text-two {
+  position: absolute;
+  top:75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: hsl(198, 62%, 26%);
+  text-align: center;
+  width: 80%;
+}
+
+.overlay-text-two h1 {
+  font-family: 'Fraunces', serif;
+  font-weight: 900;
+  margin-bottom: 20px;
+
+}
+.overlay-text-two{
+  font-family: 'Barlow', sans-serif;
+  font-weight: 600;
+
+}

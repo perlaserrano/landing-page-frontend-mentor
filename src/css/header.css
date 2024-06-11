@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=Fraunces:wght@700;900&display=swap');
+
+/* src/css/header.css */
+
+.header-container {
+    background: url('../images/desktop/image-header.jpg') no-repeat center center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    align-items: center;
+  }
+  
+  .logo .nav {
+    padding-left: 0;
+  }
+  
+  .nav {
+    list-style-type: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-item {
+    margin-right: 20px;
+  }
+  
+  .nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-family: 'Barlow', sans-serif;
+    font-weight: 600;
+  }
+  
+  .nav-link.active {
+    font-weight: 700;
+  }
+  
+  .creatives {
+    display: flex;
+    flex-direction: column; /* Cambiamos la dirección a columna para apilar elementos */
+    align-items: center; /* Centramos los elementos horizontalmente */
+    text-align: center; /* Alineamos el texto y los elementos en el centro */
+    flex: 1;
+  }
+  
+  .creatives h1 {
+    font-family: 'Fraunces', serif;
+    font-weight: 900;
+    color: #fff;
+    font-size: 38px;
+    margin: 0;
+  padding: 20px 0; 
+  }
+
+  .arrow-down {
+    display: flex;
+    justify-content: center;
+    margin-top: 8rem; /* Ajusta el margen superior según sea necesario */
+    text-align: center; /* Alinea el ícono en el centro */
+  }
+  
+  .arrow-down i {
+    font-size: 90px;
+    color: #fff;
+  }
+ 
