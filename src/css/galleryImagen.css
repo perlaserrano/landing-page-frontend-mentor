@@ -1,0 +1,10 @@
+
+
+.container-image-gallery{
+    margin-top: 5rem;
+}
+
+.imagen-gallery img{
+    width: 100%;
+    height: 100%;
+}

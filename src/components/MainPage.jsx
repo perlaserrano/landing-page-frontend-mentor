@@ -1,4 +1,4 @@
-// MediumPage.jsx
+
 import React from "react";
 import transformImage from "../images/desktop/image-transform.jpg";
 import imagenCup from "../images/desktop/image-stand-out.jpg";
@@ -6,7 +6,7 @@ import imagenGraphic from "../images/desktop/image-graphic-design.jpg";
 import imagenPhotography from "../images/desktop/image-photography.jpg";
 import '../css/main.css';
 
-export const MediumPage = () => {
+export const MainPage = () => {
   return (
     <div className="medium-container">
       <div className="container">

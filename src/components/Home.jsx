@@ -1,18 +1,17 @@
 import React from "react";
-import { MediumPage } from "./MediumPage";
-import { Testimonial } from "./Testimonial";
 import Layout from "./Layout";
-
-
-
+import { Testimonial } from "./Testimonial";
+import { GalleryImagen } from "./GalleryImagen";
+import { MainPage } from "./MainPage";
 
 
 export const Home = () => {
   return (
     <>
       <Layout>
-    <MediumPage />
+    <MainPage />
     <Testimonial/>
+    <GalleryImagen/>
       </Layout>
     </>
   );
