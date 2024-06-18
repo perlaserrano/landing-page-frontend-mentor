@@ -1,35 +1,47 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import menuIcon from '../images/icon-hamburger.svg';
+import IconClose from "./IconClose"; 
 import logo from "../images/logo.svg";
 import '../css/header.css';
 
-
 export const Header = () => {
-  
+  const [menuOpen, setMenuOpen] = useState(false);
+
   useEffect(() => {
-    window.addEventListener('scroll', function() {
+    const handleScroll = () => {
       const header = document.querySelector('.header-content');
       const scrollPosition = window.scrollY;
-    
+
       if (scrollPosition > 0) {
         header.classList.add('scroll-background');
       } else {
         header.classList.remove('scroll-background');
       }
-    });
-  
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
 
   return (
     <div className="header-container">
       <div className="header-content">
         <div className="logo">
-          <ul className="nav">
-            <li className="nav-item">
-              <img src={logo} alt="logo" />
-            </li>
-          </ul>
+          <img src={logo} alt="logo" />
         </div>
-        <ul className="nav justify-content-end">
+        <div className="menu-icon">
+          <button style={{border: "none", backgroundColor: "transparent"}} onClick={toggleMenu}>
+            {menuOpen ? <IconClose /> : <img src={menuIcon} alt="menu icon" />}
+          </button>
+        </div>
+        <ul className={`nav justify-content-end ${menuOpen ? 'open' : ''}`}>
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">
               About
@@ -45,19 +57,8 @@ export const Header = () => {
               Projects
             </a>
           </li>
-          <li className="nav-item">
-            <a
-              style={{
-                backgroundColor: "white",
-                color: "black",
-                borderRadius: "2.5rem",
-                transition: "0.25s",
-                fontFamily: "Fraunces",
-                padding: "0.2rem 2.5rem",
-              }}
-              className="nav-link"
-              href="#"
-            >
+          <li className="nav-item contact">
+            <a className={`nav-link ${menuOpen ? 'mobile-contact' : 'contact'}`} href="#">
               Contact
             </a>
           </li>
@@ -66,7 +67,7 @@ export const Header = () => {
       <div className="creatives">
         <h1>We are creatives</h1>
         <div className="arrow-down">
-          <i className="bi bi-arrow-down"></i>{" "}
+          <i className="bi bi-arrow-down"></i>
         </div>
       </div>
     </div>
