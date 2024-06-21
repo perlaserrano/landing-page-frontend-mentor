@@ -1,6 +1,6 @@
+// components/Header.js
 import React, { useEffect, useState } from "react";
-import menuIcon from '../images/icon-hamburger.svg';
-import IconClose from "./IconClose"; 
+import { HamburgerMenu } from "./HamburgerMenu";
 import logo from "../images/logo.svg";
 import '../css/header.css';
 
@@ -36,11 +36,7 @@ export const Header = () => {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-        <div className="menu-icon">
-          <button style={{border: "none", backgroundColor: "transparent"}} onClick={toggleMenu}>
-            {menuOpen ? <IconClose /> : <img src={menuIcon} alt="menu icon" />}
-          </button>
-        </div>
+        <HamburgerMenu menuOpen={menuOpen} toggleMenu={toggleMenu} />
         <ul className={`nav justify-content-end ${menuOpen ? 'open' : ''}`}>
           <li className="nav-item">
             <a className="nav-link active" aria-current="page" href="#">
